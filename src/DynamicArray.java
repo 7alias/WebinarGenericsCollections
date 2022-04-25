@@ -19,6 +19,10 @@ public class DynamicArray {
             data = grow(data);}
             data[size++] = value;
         }
+    public Object get(int index) {
+
+    return data[index];
+    }
 
 
 
