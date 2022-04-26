@@ -7,7 +7,7 @@ public class App {
 
 
         int choice = 0;
-        DynamicArray toDoList = new DynamicArray();
+        DynamicStringArray toDoList = new DynamicStringArray();
 
         Scanner sc = new Scanner(System.in);
 

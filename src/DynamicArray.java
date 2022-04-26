@@ -1,40 +1,43 @@
 import java.util.Arrays;
 
-public class DynamicArray {
-    private int size;
+public class DynamicArray<E> {
+    private final static int DEFAULT_CAPACITY = 2;
+    private int capacity;
+    private int size = 0;
     private Object[] data;
 
 
-    public DynamicArray(int initialCapacity) {
-        data = new Object[initialCapacity];
-        size = 0;
+    public DynamicArray(int capacity) {
+        this.capacity = capacity;
+        data = new Object[capacity];
     }
 
     public DynamicArray() {
-        this(2);
+        this(DEFAULT_CAPACITY);
     }
 
-    public void add(Object value) {
+    public void add(E value) {
         if (data.length <= size) {
-            data = grow(data);}
-            data[size++] = value;
+            data = grow();
         }
-    public Object get(int index) {
-
-    return data[index];
+        data[size++] = value;
     }
 
+    private E[] grow() {
+        capacity = data.length * 2;
+        return (E[]) Arrays.copyOf(data, capacity);
 
+    }
 
-    private Object[] grow(Object[] oldArray) {
-        return Arrays.copyOf(oldArray, oldArray.length * 2);
+    public E get(int index) {
 
+        return (E) data[index];
     }
 
     @Override
     public String toString() {
-        return "{"+
-                 Arrays.toString(data)+
+        return "{" +
+                Arrays.toString(data) +
                 '}'
                 ;
     }
