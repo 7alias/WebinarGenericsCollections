@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        DynamicArray<Car> transport = new DynamicArray<>();
+        CustomArrayList<Car> transport = new CustomArrayList<>();
         transport.add(new Car());
         transport.add(new Car());
         transport.add(new Car());

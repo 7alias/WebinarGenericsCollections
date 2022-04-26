@@ -13,21 +13,24 @@ public class App {
 
         do {
             try {
-                System.out.println("1. Add to do\n2 Show All\n3. Exit");
+                System.out.println("1. Add to do\n2 Show All\n3. Delete\n4.Exit");
 
                 choice = sc.nextInt();
-                if (choice == 1) {
+                if (1 == choice) {
                     System.out.println("Enter new ToDo");
                     sc.nextLine();
                     toDoList.add(sc.nextLine());
-                } else if (choice == 2) {
+                } else if (2 == choice) {
                     System.out.println(toDoList.toString());
+                } else if (3 == choice){
+                    System.out.println("Write ToDo number");
+                    toDoList.remove(sc.nextInt());
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Wrong input");
                 break;
             };
-        } while (choice != 3);
+        } while (4 != choice);
     }
 
 /*

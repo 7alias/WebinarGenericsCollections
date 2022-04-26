@@ -1,6 +1,5 @@
-public class DynamicStringArray extends DynamicArray<String> {
+public class DynamicStringArray extends CustomArrayList<String> {
 
 
-    public DynamicStringArray() {
-    }
+
 }
