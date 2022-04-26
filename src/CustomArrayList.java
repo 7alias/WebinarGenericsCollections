@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class CustomArrayList<E> implements DynamicStruct<E> {
+public class CustomArrayList<E> implements CustomList<E> {
     private final static int DEFAULT_CAPACITY = 5;
     private int size;
     private Object[] data;

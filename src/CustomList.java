@@ -1,4 +1,4 @@
-public interface DynamicStruct<E> {
+public interface CustomList<E> {
     void add(E value);
 
     E get(int index);
